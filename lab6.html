@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student form</title>
+  </head>
+
+  <body>
+    <h2><strong>Student submission form</strong></h2>
+    <form action=" Sushal.php" autocomplete="on">
+      <label for="name">Name</label>
+      <div>
+        <input
+          type="text"
+          name=" myname"
+          id="name"
+          placeholder="your name here"
+          required
+        />
+      </div>
+      <br />
+      <label for="roll">Roll number</label>
+      <div>
+        <input type="number" name=" myroll" id="roll" />
+      </div>
+      <br />
+      <label for="DOB">Date of birth</label>
+      <div>
+        <input type="date" name=" mydob" id="DOB" />
+      </div>
+      <br />
+      <label for="email">Email</label>
+      <div>
+        <input type="email" name=" myemail" id="email" autocomplete="off" />
+      </div>
+      <br />
+      <label for="ready">Are you ready to take part in this Hackathon</label>
+      <div>
+        Yes: <input type="radio" name=" myeligible" id="ready" /> NO:
+        <input type="radio" name=" myeligible" id="ready" />
+      </div>
+      <br />
+      <label for="gender">Gender</label>
+      <div>
+        Male: <input type="radio" name=" mygender" id="gender" /> Female:
+        <input type="radio" name=" mygender" id="gender" /> Other:
+        <input type="radio" name=" mygender" id="gender" />
+      </div>
+      <br />
+      <label for="eligible">Are you eligible</label>
+      <div>
+        <input type="checkbox" name=" eligibility" id="eligible" />
+      </div>
+      <br />
+      <label for="you">Tell us about yourself</label>
+      <div>
+        <textarea name="" id="you" cols="60" rows="20"></textarea>
+      </div>
+      <br />
+      <label for="choose">What is your dream job</label>
+      <div>
+        <select name="myfuture" id="choose">
+          <option value="dri">Driver</option>
+          <option value="plum" selected>Plumber</option>
+          <option value="gard">Gardener</option>
+        </select>
+      </div>
+      <br />
+      <label for="pass">password</label>
+      <div>
+        <input type="password" name=" mypass" id="pass" />
+      </div>
+      <br />
+      <label for="submit">Submit now</label>
+      <div>
+        <input type="submit" name=" mysub" id="submit" />
+      </div>
+    </form>
+  </body>
+</html>

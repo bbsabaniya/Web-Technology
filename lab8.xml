@@ -1,0 +1,17 @@
+<?xml version ='1.0' standalone ='yes'?>
+<!DOCTYPE mail[
+<!ELEMENT mail (to,from,heading,subject) > 
+<!ELEMENT to (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT heading (#PCDATA)>
+<!ELEMENT subject (#PCDATA)>
+]>
+
+<mail>
+  <to> Hari </to>
+  <from> Shyam </from>
+  <heading> Reminder </heading>
+  <subject> Meeting at 12:00 pm </subject>
+</mail>
+
+

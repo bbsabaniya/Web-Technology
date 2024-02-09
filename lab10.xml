@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <!-- XML Document -->
+  <bookstore>
+    <book>
+      <title>Introduction to XQuery</title>
+      <author>John Doe</author>
+      <price>29.99</price>
+    </book>
+    <book>
+      <title>XPath Basics</title>
+      <author>Jane Smith</author>
+      <price>19.95</price>
+    </book>
+    <book>
+      <title>XML Processing with XSLT</title>
+      <author>Michael Johnson</author>
+      <price>34.50</price>
+    </book>
+  </bookstore>
+
+  <!-- XPath Examples -->
+  <xpath-examples>
+    <!-- Example 1: Select all book titles -->
+    <example>
+      <expression>/bookstore/book/title</expression>
+    </example>
+
+    <!-- Example 2: Select books with a price greater than 30 -->
+    <example>
+      <expression>/bookstore/book[price > 30]</expression>
+    </example>
+  </xpath-examples>
+
+  <!-- XQuery Examples -->
+  <xquery-examples>
+    
+    <!-- Example 1: Select the price of the second book -->
+    <example>
+      <expression>
+        <![CDATA[
+        doc("example.xml")//book[2]/price/text()
+        ]]>
+      </expression>
+    </example>
+
+    <!-- Example 2: Select books with a price greater than 30 -->
+    <example>
+      <expression>
+        <![CDATA[
+        for $book in doc("example.xml")//book
+        where xs:decimal($book/price) > 30
+        return $book
+        ]]>
+      </expression>
+    </example>
+  </xquery-examples>
+</root>

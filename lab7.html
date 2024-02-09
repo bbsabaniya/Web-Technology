@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Set a cookie
+      document.cookie =
+        "username=John Doe; expires=" +
+        new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toUTCString() +
+        "; path=/";
+
+      // Get the value of the "username" cookie
+      var username = document.cookie.replace(
+        /(?:(?:^|.*;\s*)username\s*=\s*([^;]*).*$)|^.*$/,
+        "$1"
+      );
+
+      // Display the value
+      if (username) {
+        console.log("Welcome back, " + username + "!");
+      } else {
+        console.log("No username cookie found.");
+      }
+    </script>
+  </body>
+</html>
